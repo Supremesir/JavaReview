@@ -10,8 +10,7 @@ import java.util.Scanner;
 public class TestStu1 {
 
     public static void main(String[] args) {
-        String name, tutor;
-        int gpa;
+        String name;
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入学生姓名：");
         name = scanner.next();
