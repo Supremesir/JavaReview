@@ -6,6 +6,7 @@ package com.supremesir.test2;
  */
 
 public class ArrayOpt {
+
     private  int[] array;
     private int min_location, min_number;
     private double average;
