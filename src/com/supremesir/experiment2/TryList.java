@@ -30,12 +30,13 @@ public class TryList {
             stuList.add(stu4);
         }
 
+        //TODO: 对list里的对象按照不同属性进行排序
         //为stuList设置迭代器
         Iterator<Student4> iterator = stuList.iterator();
         while (iterator.hasNext()) {
-            //
-            Student4 now = iterator.next();
-            System.out.println("学生姓名：" + now.name + "\n学生计算机成绩：" + now.computerScore);
+            //返回下一个对象
+            Student4 student4 = iterator.next();
+            System.out.println("学生姓名：" + student4.name + "\n学生计算机成绩：" + student4.computerScore);
         }
 
     }
