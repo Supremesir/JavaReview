@@ -50,6 +50,11 @@ public class FileLearn {
 
             //强制将缓冲区里的内容写入
             bufferedWriter.flush();
+
+            //将第一个字是"张"的输出
+            if (line.indexOf("张") == 0) {
+                System.out.println(line);
+            }
         }
 //        //一个字符一个字符地读写
 //        int ch = 0;
