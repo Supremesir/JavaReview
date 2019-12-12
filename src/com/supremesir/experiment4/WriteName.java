@@ -15,9 +15,6 @@ public class WriteName implements Runnable {
     //因为写线程是在读入数据之后join的，如果读到finish，程序直接结束，写线程不会运行
     @Override
     public void run() {
-
-        System.out.println("学号是：" + rw.ID);
-        System.out.println("姓名是：" + rw.Name);
-
+        System.out.println("学号：" + rw.ID+"" + "\t姓名:" + rw.Name);
     }
 }
