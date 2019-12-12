@@ -50,7 +50,7 @@ public class TryList {
 
 
         //根据计算机成绩排序
-        Collections.sort(stuList,((o1, o2) -> o1.computerScore-o2.computerScore));
+        Collections.sort(stuList,((o1, o2) ->  o1.computerScore-o2.computerScore));
         System.out.println("\n按学生计算机成绩排序：");
         //为stuList设置迭代器
         Iterator<Student4> iterator1 = stuList.iterator();
