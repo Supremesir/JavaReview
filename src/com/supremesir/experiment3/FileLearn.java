@@ -51,6 +51,11 @@ public class FileLearn {
             //强制将缓冲区里的内容写入
             bufferedWriter.flush();
         }
+//        //一个字符一个字符地读写
+//        int ch = 0;
+//        while ((ch = bufferedReader.read()) != -1) {
+//            bufferedWriter.write(ch);
+//        }
         //关闭buffer
         bufferedReader.close();
         bufferedWriter.close();
