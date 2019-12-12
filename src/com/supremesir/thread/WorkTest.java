@@ -8,7 +8,9 @@ package com.supremesir.thread;
 public class WorkTest {
     public static void main(String[] args) {
 
+        //new Work类，无参构造
         Work work = new Work();
+        //启动无参构造里创建的线程
         work.read.start();
         work.write.start();
 
