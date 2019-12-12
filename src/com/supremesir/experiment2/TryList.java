@@ -1,8 +1,6 @@
 package com.supremesir.experiment2;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * @author HaoFan Fang
@@ -30,12 +28,35 @@ public class TryList {
             stuList.add(stu4);
         }
 
-        //TODO: 对list里的对象按照不同属性进行排序
+        //旧写法，匿名类Comparator重写compare方法
+//        Collections.sort(stuList, new Comparator<Student4>() {
+//            @Override
+//            public int compare(Student4 o1, Student4 o2) {
+//                return o1.name.compareTo(o2.name);
+//            }
+//        });
+        //新写法，lambda比较器
+        //根据姓名排序
+        //FIXME: lambda比较器不能按照中文姓名排序
+        Collections.sort(stuList,((o1, o2) -> o1.name.compareTo(o2.name)));
+        System.out.println("按学生姓名排序：");
         //为stuList设置迭代器
         Iterator<Student4> iterator = stuList.iterator();
         while (iterator.hasNext()) {
             //返回下一个对象
             Student4 student4 = iterator.next();
+            System.out.println("学生姓名：" + student4.name + "\n学生计算机成绩：" + student4.computerScore);
+        }
+
+
+        //根据计算机成绩排序
+        Collections.sort(stuList,((o1, o2) -> o1.computerScore-o2.computerScore));
+        System.out.println("\n按学生计算机成绩排序：");
+        //为stuList设置迭代器
+        Iterator<Student4> iterator1 = stuList.iterator();
+        while (iterator1.hasNext()) {
+            //返回下一个对象
+            Student4 student4 = iterator1.next();
             System.out.println("学生姓名：" + student4.name + "\n学生计算机成绩：" + student4.computerScore);
         }
 
